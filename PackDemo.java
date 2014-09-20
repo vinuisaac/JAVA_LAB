@@ -21,7 +21,7 @@ public class circle
 
 package shape;
 
-public class Triangle
+public class triangle
 {
   public void tri(int w,int h)
   {
@@ -29,5 +29,18 @@ public class Triangle
   }
 }
 
+package shape;
 
-  
+public class PackDemo{
+    public statc void man(String[] args){
+      square s=new square();
+      s.sq(6);
+      
+      triangle t=new triangle();
+      t.tri(10,5)
+      
+      circle cr=new circle();
+      cr.cir(7);
+    }
+}
+
