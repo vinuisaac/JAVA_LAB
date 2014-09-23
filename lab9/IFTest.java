@@ -7,7 +7,7 @@
   
   
   interface IntStack{
-    void Push(int item);
+    void push(int item);
     int pop();
     }
     
