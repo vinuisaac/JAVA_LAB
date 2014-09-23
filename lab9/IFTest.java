@@ -92,12 +92,16 @@
         
         //Dynamic stack
         
-        DynStack ds=new DynStack(8);
-        for(int i=0;i<20;i++)
+        System.out.println("Enter the initial size of Dynamic Stack");
+        //Scanner sc=new Scanner(System.in);
+        int b=sc.nextInt();
+        FixedStack fs=new DynStack(b);
+        
+        for(int i=0;i<b;i++)
         ds.push(i);
         
         System.out.println("The contents of the Dynamic Stack are:");
-        for(int i=0;i<20;i++)
+        for(int i=0;i<b;i++)
         System.out.println(ds.pop());
 
       }
