@@ -1,3 +1,10 @@
+/*Complete the following:
+1. Create a package named shape.
+2. Create some classes in the package representing
+some common shapes like Square,
+Triangle, and Circle.
+3. Import and compile these classes in other program*/
+
 package Shape;
 public class square{
 	public void sq(int a)
