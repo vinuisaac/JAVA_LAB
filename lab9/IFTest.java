@@ -76,6 +76,8 @@
     class IFTest{
       public static void main(String[] args)
       {
+        
+        IntStack Mystack; //creating a reference to the interface variable
         //Fixed Stack
         
         System.out.println("Enter the size of Fixed Stack");
@@ -83,26 +85,30 @@
         int a=sc.nextInt();
         FixedStack fs=new FixedStack(a);
         
+        //pushing elements into the Fixed Stack
+        Mystack=fs; //load Fixed stack
         for(int i=0;i<a;i++)
-        fs.push(i);
+        Mystack.push(i);
         
         System.out.println("The Contents of the Fixed Stack are:");
         for(int i=0;i<a;i++)
-        System.out.println(fs.pop());
+        System.out.println(Mystack.pop());
         
         //Dynamic stack
         
         System.out.println("Enter the initial size of Dynamic Stack");
         //Scanner sc=new Scanner(System.in);
         int b=sc.nextInt();
-        FixedStack fs=new DynStack(b);
+        DynStack ds=new DynStack(b);
         
+        //pushing elements into the Dynamic stack
+        Mystack=ds; //load Dynamic stack
         for(int i=0;i<b;i++)
-        ds.push(i);
+        Mystack.push(i);
         
         System.out.println("The contents of the Dynamic Stack are:");
         for(int i=0;i<b;i++)
-        System.out.println(ds.pop());
+        System.out.println(Mystack.pop());
 
       }
     }
