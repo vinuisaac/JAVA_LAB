@@ -17,7 +17,14 @@ class Outer{
 	} 
 	void show()
 	{
-		System.out.println("Displaying the contents of the inner y:"+y );
+		System.out.println("Displaying the contents of the inner y:"+in_y ); //will return an error
+		
+		/* inorder to access this inner class variable from the outer class, create an object
+		of the inner class in the outerclass, and invoke the variable with the object
+		
+		example: Inner inobj2=new Inner();
+			 System.out.println("Displaying the contents of the inner y:"+inobj2.in_y); */
+		
 	}
 }
 
