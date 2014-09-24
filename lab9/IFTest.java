@@ -11,10 +11,10 @@
     int pop();
     }
     
-    import java.util.*;   
+    //import java.util.Scanner;   
     
     class FixedStack implements IntStack{
-      private int stack[];
+      private int stck[];
       private int tos;
       FixedStack(int size)
       {
@@ -43,7 +43,7 @@
     class DynStack implements IntStack{
       private int stck[];
       private int tos;
-      Dynstack(int size)
+      DynStack(int size)
       {
         stck=new int[size];
         tos=-1;
@@ -80,34 +80,36 @@
         IntStack Mystack; //creating a reference to the interface variable
         //Fixed Stack
         
-        System.out.println("Enter the size of Fixed Stack");
+        /*System.out.println("Enter the size of Fixed Stack");
         Scanner sc=new Scanner(System.in);
-        int a=sc.nextInt();
-        FixedStack fs=new FixedStack(a);
+        int a=sc.nextInt();*/
+        
+        FixedStack fs=new FixedStack(8);
         
         //pushing elements into the Fixed Stack
         Mystack=fs; //load Fixed stack
-        for(int i=0;i<a;i++)
+        for(int i=0;i<8;i++)
         Mystack.push(i);
         
         System.out.println("The Contents of the Fixed Stack are:");
-        for(int i=0;i<a;i++)
+        for(int i=0;i<8;i++)
         System.out.println(Mystack.pop());
         
         //Dynamic stack
         
-        System.out.println("Enter the initial size of Dynamic Stack");
+        /*System.out.println("Enter the initial size of Dynamic Stack");
         //Scanner sc=new Scanner(System.in);
-        int b=sc.nextInt();
-        DynStack ds=new DynStack(b);
+        int b=sc.nextInt();*/
+        
+        DynStack ds=new DynStack(8);
         
         //pushing elements into the Dynamic stack
         Mystack=ds; //load Dynamic stack
-        for(int i=0;i<b;i++)
+        for(int i=0;i<8;i++)
         Mystack.push(i);
         
         System.out.println("The contents of the Dynamic Stack are:");
-        for(int i=0;i<b;i++)
+        for(int i=0;i<8;i++)
         System.out.println(Mystack.pop());
 
       }
