@@ -8,8 +8,8 @@ public interface Shape{
 import java.util.Scanner;
 
 class Dimensions{
-  private double width,length;
-  dimensions(double w,double l)
+  private double width,height;
+  dimensions(double w,double h)
   {
     width=w;
     height=h;
