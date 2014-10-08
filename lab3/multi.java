@@ -1,15 +1,13 @@
 /* Simple Program on Java for the implementation of Multiple inheritance using interfaces 
 to calculate the area of a rectangle and triangle */
 
-public interface Shape{
+interface Shape{
   public void area();
 }
 
-import java.util.Scanner;
-
-class Dimensions{
+class Dimension{
   private double width,height;
-  dimensions(double w,double h)
+  Dimension(double w,double h)
   {
     width=w;
     height=h;
@@ -39,7 +37,7 @@ class triangle extends Dimension implements Shape{
     }
 }
 
-class rectanlge extends Dimension implements Shape{
+class rectangle extends Dimension implements Shape{
   rectangle(double w,double h)
   {
     super(w,h);
@@ -49,28 +47,30 @@ class rectanlge extends Dimension implements Shape{
     double h,w;
     h=getHeight();
     w=getWidth();
-    double area=w * h
+    double area=w * h;
     System.out.println("Area of a Rectangle is"+area);
     }
 }
 
-public class Multi{
+public class multi{
   public static void main(String[] args)
   {
     double ht,wt,hr,wr;
-    Scanner scan=new Scanner(System.in);
     
-    triangle t=new triangle();
-    rectangle r=new rectangle();
+    //Scanner scan=new Scanner(System.in);
+    //you can use scanner to make it more interactive
     
     System.out.println("Enter height of the triangle");
-    ht=scan.nextInt();
+    ht=20;
     System.out.println("Enter width of the triangle");
-    wt=scan.nextInt();
+    wt=20;
     System.out.println("Enter height of the rectangle");
-    hr=scan.nextInt();
+    hr=30;
     System.out.println("Enter width of the rectangle");
-    wr=scan.nextInt();
+    wr=30;
+    
+    triangle t=new triangle(wt,ht);
+    rectangle r=new rectangle(wr,hr);
     
     t.area();
     r.area();
