@@ -75,6 +75,7 @@ class interface2{
 	public static void main(String[] args)
 	{
 		intstack MyStack;
+		FixedStack fs=new FixedStack(10);
 		Scanner scan=new Scanner(System.in);
 		int turn=10; //for dynstack
 		for(;;){
@@ -90,8 +91,13 @@ class interface2{
 			//Fixed stack
 		System.out.println("Enter the size of the stack");
 		int a=scan.nextInt();
+		if(a>10){
+			System.out.println("Stack size max is 10");
+				break;
+		}
+			else
 		
-		FixedStack fs=new FixedStack(10);
+		//FixedStack fs=new FixedStack(10);
 		MyStack=fs;
 		for(int i=0;i<a;i++)
 			MyStack.push(i);
