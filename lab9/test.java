@@ -88,7 +88,7 @@ class interface2{
 		
 		case 1: 
 			//Fixed stack
-		System.out.println("Enter the size of the fixed stack");
+		System.out.println("Enter the size of the stack");
 		int a=scan.nextInt();
 		
 		FixedStack fs=new FixedStack(10);
