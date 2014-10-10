@@ -1,4 +1,4 @@
-import java.util.*;
+iimport java.util.*;
 import java.lang.*;
 
 interface intstack{
@@ -75,13 +75,13 @@ class interface2{
 	public static void main(String[] args)
 	{
 		intstack MyStack;
-		FixedStack fs=new FixedStack(10);
 		Scanner scan=new Scanner(System.in);
 		int turn=10; //for dynstack
 		for(;;){
 		System.out.println("Choice na enter madi");
 		System.out.println("1. Fixed");
 		System.out.println("2. Add 10 elements to dynamic stack" );
+		System.out.println("3.Exit");
 		int choice=scan.nextInt();
 		
 			
@@ -91,17 +91,17 @@ class interface2{
 			//Fixed stack
 		System.out.println("Enter the size of the stack");
 		int a=scan.nextInt();
-		if(a>10){
-			System.out.println("Stack size max is 10");
-				break;
-		}
-			else
 		
-		//FixedStack fs=new FixedStack(10);
+		FixedStack fs=new FixedStack(10);
 		MyStack=fs;
+
+		System.out.println("Enter the elements to push");
 		for(int i=0;i<a;i++)
-			MyStack.push(i);
-			
+		{
+
+			Scanner ele = new Scanner(System.in);
+			MyStack.push(ele.nextInt());
+		}	
 			System.out.println("The Contents of the stack are:");
 			for(int i=0;i<a;i++)
 				System.out.println(MyStack.pop());
@@ -114,18 +114,21 @@ class interface2{
 			//int turn=10;
 			DynStack ds=new DynStack(20);
 			MyStack=ds;
+
+			System.out.println("Enter the elements to push");
 			for(int i=0;i<turn;i++)
-			MyStack.push(i);
-			
+			{
+				Scanner ele = new Scanner(System.in);
+				MyStack.push(ele.nextInt());
+			}
 			System.out.println("The Contents of the stack are:");
 			for(int i=0;i<10;i++)
 			System.out.println(MyStack.pop());
 			turn=turn+10;
 			break;
 			
-		//case 3: 
-			//exit;
-			//break;
+		case 3: 
+			System.exit(0);
 		}
 		}
 	}
