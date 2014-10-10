@@ -76,7 +76,7 @@ class interface2{
 	{
 		intstack MyStack;
 		Scanner scan=new Scanner(System.in);
-		
+		int turn=10; //for dynstack
 		for(;;){
 		System.out.println("Choice na enter madi");
 		System.out.println("1. Fixed");
@@ -105,7 +105,7 @@ class interface2{
 		
 		case 2:
 			//it will run for the first time, then it wont take anymore values
-			int turn=10;
+			//int turn=10;
 			DynStack ds=new DynStack(20);
 			MyStack=ds;
 			for(int i=0;i<turn;i++)
